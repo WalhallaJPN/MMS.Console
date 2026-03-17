@@ -11,7 +11,7 @@ public static class StarWarsHelper
     /// Method to map the pilots from a planet to a response with their starships.
     /// </summary>
     /// <param name="planet">Planet.</param>
-    /// <returns></returns>
+    /// <returns>Response.</returns>
     public static object GetPlanetStarshipResponse(Planet planet)
     {
         var response = new
@@ -33,10 +33,10 @@ public static class StarWarsHelper
     }
 
     /// <summary>
-    /// Method 
+    /// Method to get the starships with some info about pilots from a planet.
     /// </summary>
-    /// <param name="planetName"></param>
-    /// <returns></returns>
+    /// <param name="planetName">Planet name.</param>
+    /// <returns>Planet.</returns>
     public static async Task<Planet> GetStarshipsFromPlanetAsync(string planetName)
     {
         using var httpClient = new HttpClient();
