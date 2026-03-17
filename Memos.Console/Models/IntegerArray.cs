@@ -26,6 +26,11 @@ public class IntegerArray
     /// </summary>
     public IntegerArray(int arraySize, int minValue, int maxValue)
     {
+        if(arraySize <= 0)
+        {
+            throw new ArgumentException("Array size must be a positive number.");
+        }
+
         Array = new int[arraySize];
         GenerateArray(minValue, maxValue);
     }
