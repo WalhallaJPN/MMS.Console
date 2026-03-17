@@ -17,17 +17,16 @@ public static class StarWarsHelper
         var response = new
         {
             PlanetName = planet.Name,
-            Pilots = planet.Residents.Select(x =>
-        new
-        {
-            x.Name,
-            Starships = x.Starships.Select(s => new
+            Pilots = planet.Residents.Select(x => new
             {
-                s.Name,
-                s.Manufacturer,
-                s.StarshipClass
-            }).ToList()
-        })
+                x.Name,
+                Starships = x.Starships.Select(s => new
+                {
+                    s.Name,
+                    s.Manufacturer,
+                    s.StarshipClass
+                }).ToList()
+            })
         };
 
         return response;
