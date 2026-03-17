@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="Memos.Console/Memos.Console.csproj" />
+  <Project Path="Memos.Console2/Memos.Console2.csproj" />
+  <Project Path="Memos.Console3/Memos.Console3.csproj" />
 </Solution>
